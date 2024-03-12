@@ -1,3 +1,8 @@
+note for future: the non-decreasing trend may be related to "Memory per executor" which is 1024MB. Not needed to add executor/worker when 
+1024MB is enough for the entire dataset --->one worker manages to do everything. Adding more workers causes increased overhead and is not needed
+
+
+
 STRONG VIBES
 Testing with larger csv files. filename: replicated_Data_x2000.csv
 
@@ -6,6 +11,37 @@ Testing with larger csv files. filename: replicated_Data_x2000.csv
 6 cores     Elapsed time: 19.165384769439697 seconds
 4 cores     Elapsed time: 20.252171993255615 seconds
 2 cores     Elapsed time: 21.54875159263611 seconds
+
+
+STRONG VIBES AGAIN 
+Testing with even LARGER csv files. filename: replicated_Data_1GB.csv
+
+10 cores    Elapsed time: 21.386439561843872 seconds
+8 cores     Elapsed time: 21.67235040664673 seconds
+6 cores     Elapsed time: 21.634326219558716 seconds
+4 cores     Elapsed time: 22.318207263946533 seconds
+2 cores     Elapsed time: 26.948407649993896 seconds
+
+
+STRONG VIBES AGAIN 
+Testing with even LARGER csv files. filename: replicated_Data_2GB.csv
+
+10 cores    Elapsed time: 41.389267444610596 seconds
+8 cores     Elapsed time: 42.15894961357117 seconds
+6 cores     Elapsed time: 41.190566539764404 seconds
+4 cores     Elapsed time: 40.452576637268066 seconds
+2 cores     Elapsed time: 41.227601051330566 seconds
+
+
+
+STRONG VIBES AGAIN 
+Testing with even LARGER csv files. filename: replicated_Data_4GB.csv
+
+10 cores    Elapsed time: 128.95948123931885 seconds
+8 cores     Elapsed time: 124.83097839355469 seconds
+6 cores     Elapsed time: 108.64799571037292 seconds
+4 cores     Elapsed time: 115.50917601585388 seconds
+2 cores     Elapsed time: 193.3403069972992 seconds & Elapsed time: 181.79714965820312 seconds
 
 
 

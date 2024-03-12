@@ -1,0 +1,20 @@
+STRONG VIBES
+Testing with larger csv files. filename: replicated_Data_x2000.csv
+
+10 cores    Elapsed time: 17.14944100379944 seconds
+8 cores     Elapsed time: 16.785013437271118 seconds
+6 cores     Elapsed time: 19.165384769439697 seconds
+4 cores     Elapsed time: 20.252171993255615 seconds
+2 cores     Elapsed time: 21.54875159263611 seconds
+
+
+
+WEAK VIBES
+Testing with larger csv files. filename: replicated_Data_x2500.csv
+
+10 cores    Elapsed time: 20.502609491348267 seconds
+8 cores     Elapsed time: 16.50597047805786 seconds
+6 cores     Elapsed time: 15.266493320465088 seconds
+4 cores     Elapsed time: 10.323713064193726 seconds
+2 cores     Elapsed time: 4.977943181991577 seconds
+

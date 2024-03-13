@@ -6,51 +6,69 @@ note for future: the non-decreasing trend may be related to "Memory per executor
 STRONG VIBES
 Testing with larger csv files. filename: replicated_Data_x2000.csv
 
-10 cores    Elapsed time: 17.14944100379944 seconds
-8 cores     Elapsed time: 16.785013437271118 seconds
-6 cores     Elapsed time: 19.165384769439697 seconds
-4 cores     Elapsed time: 20.252171993255615 seconds
-2 cores     Elapsed time: 21.54875159263611 seconds
+10 cores    Elapsed time: 17.14944100379944 s
+8 cores     Elapsed time: 16.785013437271118 s
+6 cores     Elapsed time: 19.165384769439697 s
+4 cores     Elapsed time: 20.252171993255615 s
+2 cores     Elapsed time: 21.54875159263611 s
 
 
 STRONG VIBES AGAIN 
 Testing with even LARGER csv files. filename: replicated_Data_1GB.csv
 
-10 cores    Elapsed time: 21.386439561843872 seconds
-8 cores     Elapsed time: 21.67235040664673 seconds
-6 cores     Elapsed time: 21.634326219558716 seconds
-4 cores     Elapsed time: 22.318207263946533 seconds
-2 cores     Elapsed time: 26.948407649993896 seconds
+10 cores    Elapsed time: 21.386439561843872 s
+8 cores     Elapsed time: 21.67235040664673 s
+6 cores     Elapsed time: 21.634326219558716 s
+4 cores     Elapsed time: 22.318207263946533 s
+2 cores     Elapsed time: 26.948407649993896 s
 
 
 STRONG VIBES AGAIN 
 Testing with even LARGER csv files. filename: replicated_Data_2GB.csv
 
-10 cores    Elapsed time: 41.389267444610596 seconds
-8 cores     Elapsed time: 42.15894961357117 seconds
-6 cores     Elapsed time: 41.190566539764404 seconds
-4 cores     Elapsed time: 40.452576637268066 seconds
-2 cores     Elapsed time: 41.227601051330566 seconds
+10 cores    Elapsed time: 41.389267444610596 s
+8 cores     Elapsed time: 42.15894961357117 s
+6 cores     Elapsed time: 41.190566539764404 s
+4 cores     Elapsed time: 40.452576637268066 s
+2 cores     Elapsed time: 41.227601051330566 s
 
 
 
 STRONG VIBES AGAIN 
 Testing with even LARGER csv files. filename: replicated_Data_4GB.csv
 
-10 cores    Elapsed time: 128.95948123931885 seconds
-8 cores     Elapsed time: 124.83097839355469 seconds
-6 cores     Elapsed time: 108.64799571037292 seconds
-4 cores     Elapsed time: 115.50917601585388 seconds
-2 cores     Elapsed time: 193.3403069972992 seconds & Elapsed time: 181.79714965820312 seconds
+10 cores    Elapsed time: 128.95948123931885 s
+8 cores     Elapsed time: 124.83097839355469 s
+6 cores     Elapsed time: 108.64799571037292 s
+4 cores     Elapsed time: 115.50917601585388 s
+2 cores     Elapsed time: 193.3403069972992 s & Elapsed time: 181.79714965820312 s
+
+
+
+STRONG VIBES AGAIN 
+Testing with even LARGER csv files. filename: replicated_Data_5GB.csv
+
+10 cores    262.34217381477356 s & 266.3301591873169 s & 246.7812271118164 s & OUTLIERS: 923.8774914741516 s & 1080.1638751029968 s
+
+8 cores     Elapsed time: 261.2861032485962 s & Elapsed time: 330.6409294605255 s & Elapsed time: 304.3515808582306 s & OUTLIERS: Elapsed time: 428.34319019317627 s
+
+6 cores     Elapsed time: 215.46370887756348 s & Elapsed time: 390.31324529647827 s & Elapsed time: 417.4035863876343 s
+
+when performing timings with 4cores/2executors, i get "WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources"
+so, problem may be related to unsufficient resources
+according to "https://github.com/sparklyr/sparklyr/issues/1640" spark doesnt support pivot on large data frames. When adding a third worker at runtime, all of a sudden the job runs. -->confirmed resource problem
+
+4 cores     not runnable
+2 cores     not runnable
 
 
 
 WEAK VIBES
 Testing with larger csv files. filename: replicated_Data_x2500.csv
 
-10 cores    Elapsed time: 20.502609491348267 seconds
-8 cores     Elapsed time: 16.50597047805786 seconds
-6 cores     Elapsed time: 15.266493320465088 seconds
-4 cores     Elapsed time: 10.323713064193726 seconds
-2 cores     Elapsed time: 4.977943181991577 seconds
+10 cores    Elapsed time: 20.502609491348267 s
+8 cores     Elapsed time: 16.50597047805786 s
+6 cores     Elapsed time: 15.266493320465088 s
+4 cores     Elapsed time: 10.323713064193726 s
+2 cores     Elapsed time: 4.977943181991577 s
 

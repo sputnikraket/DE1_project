@@ -1,0 +1,26 @@
+\textbf{These are just some ideas I have. Confirm that 
+they are true before writing about this (maybe find some 
+nice articles to cite).}
+\textcolor{red}{Note to the one who writes discussion: 
+The 
+reason to why the execution times are so similar for 1 
+and 2 GB datasets is that the increased number of nodes 
+doesnt manage to do it faster than on single node due to 
+this: 
+\begin{itemize}
+    \item the overhead of distributing and processing 
+data across multiple executors probably outwheigs the 
+potential performance gains.
+    \item The overhead of dealing with task scheduling, 
+data serialization, and communication between executors 
+may be more significant relative to the actual 
+computation time, especially for smaller datasets of 1 
+and 2 GBs.
+    \item note for future: the non-decreasing trend (seen 
+in e.g. dark blue bars) may be related to "Memory per 
+executor" which is 1024MB. Not needed to add executor 
+when 1024MB=1GB is enough for the entire dataset --->one 
+worker manages to do everything. Adding more workers 
+causes increased overhead and is not needed
+\end{itemize}
+ }
